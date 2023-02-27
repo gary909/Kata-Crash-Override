@@ -1,5 +1,12 @@
-function aliasGen(){
-    // Code Here
+function aliasGen(a, b){
+    let fN = a[0].toUpperCase();
+    let lN = b[0].toUpperCase();
+    let regexTest = new RegExp('[A-Z]');
+      if (! regexTest.test(fN) || ! regexTest.test(lN)) {
+      return "Your name must start with a letter from A - Z.";
+    } else {
+      return firstName[fN] + " " + surname[lN]
+    }
 }
 
 console.log(aliasGen("Mike", "Millington")); // "Malware Mike"
